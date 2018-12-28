@@ -1,3 +1,21 @@
-<p>
-  create-work works!
-</p>
+<div class="workform">
+  <form>
+<p>Work Title</p>
+  <input placeholder="Work title..">
+  <p>Short Description</p>
+  <textarea placeholder="Work title.."></textarea>
+  <p>Work Title</p>
+  <input matInput placeholder="Work title..">
+  <p>Add Participants</p>
+  <input placeholder="Participant's email...." name="participants"  type="email" [(ngModel)]="participants"><button (click)="added()" [disabled]="(count>10)">Add</button>
+    <br>
+    <br>
+    <button class="submit"> Create Your Project</button>
+</form>
+</div>
+<div class="participants">
+  <p>Added Team Members :</p>
+<div *ngFor="let add of adds">
+  <p>{{add}}</p>
+</div>
+</div>

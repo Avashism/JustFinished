@@ -17,6 +17,10 @@ import { CreateWorkComponent } from './create-work/create-work.component';
 import { CurrentWorkComponent } from './current-work/current-work.component';
 import { CompletedComponent } from './completed/completed.component';
 import { WorkInviteComponent } from './work-invite/work-invite.component';
+import {FormsModule} from '@angular/forms';
+import { AddedComponent } from './create-work/added/added.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -31,7 +35,8 @@ import { WorkInviteComponent } from './work-invite/work-invite.component';
     CreateWorkComponent,
     CurrentWorkComponent,
     CompletedComponent,
-    WorkInviteComponent
+    WorkInviteComponent,
+    AddedComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,10 @@ import { WorkInviteComponent } from './work-invite/work-invite.component';
    BrowserAnimationsModule,
     TeximateModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

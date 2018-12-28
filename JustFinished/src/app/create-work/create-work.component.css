@@ -1,0 +1,38 @@
+.workform{
+  float: left;
+  font-size: 25px;
+  width: fit-content;
+  color: black;
+  margin-top: 5%;
+  left: 8%;
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+.participants {
+  width: 325px;
+  margin-top: 15%;
+  float: left;
+  alignment: left;
+  font-size: 25px;
+}
+
+textarea{
+  width: 500px;
+  height: 200px;
+  border-radius: 20px;
+  border-color: #80d0c7;
+}
+input{
+  border-top: 0px;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+.submit{
+  border-radius: 20px;
+  width: 600px;
+  alignment: center;
+}
