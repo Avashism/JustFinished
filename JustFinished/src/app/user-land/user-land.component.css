@@ -1,24 +1,32 @@
-.current{
-  margin-left: 40px;
-  float: left;
-  width: 20%;
-  color: black;
-  background: white;
-}
-.pending{
-  margin-left: 40px;
-  float: right;
-  width: 20%;
-  color: black;
-  background: white;
-}
 .completed{
+  height: 400px;
+  float: left;
+  width: 15%;
   margin-left: 40px;
-   color: black;
-   background: white;
- }
+  color: black;
+  background: white;
+}
+.invite{
+  height: 400px;
+  margin-left: 100px;
+  float: left;
+  width: 15%;
+  color: black;
+  background: white;
+}
+.current{
+  margin-top: 400px;
+  height: 250px;
+  margin-left: 100px;
+  width: 80%;
+  color: black;
+  background: white;
+}
+
+
 
 .main{
+  height: 100vh;
   background: whitesmoke;
   width: 100%;
   alignment: center;
@@ -31,4 +39,9 @@
   border-radius: 20px;
   font-size: 20px;
   background: white;
+}
+.pie{
+  float: left;
+width : 600px;
+  height: 400px;
 }

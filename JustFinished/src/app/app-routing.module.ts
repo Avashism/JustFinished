@@ -5,6 +5,8 @@ import {AboutComponent} from './about/about.component';
 import {UserLandComponent} from './user-land/user-land.component';
 import {CreateWorkComponent} from './create-work/create-work.component';
 import {SignInComponent} from './sign-in/sign-in.component';
+import {SignUpComponent} from './sign-up/sign-up.component';
+import {ProjectComponent} from './project/project.component';
 
 const routes: Routes = [
   { path: '', component: IntroPageComponent},
@@ -12,6 +14,10 @@ const routes: Routes = [
   { path: 'dashboard', component: UserLandComponent},
   { path: 'create-work', component: CreateWorkComponent},
   { path: 'sign-in', component: SignInComponent},
+  { path: 'sign-up', component: SignUpComponent},
+  { path: 'project', component: ProjectComponent},
+
+
 
 
 

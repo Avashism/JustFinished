@@ -7,18 +7,17 @@ using System.Threading.Tasks;
 
 namespace JustFinishedAPI.Database
 {
-    public class Project
+    public class User_Project
     {
         [Key]
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description{ get; set; }
         [ForeignKey("User")]
-        public int UserId { get; set; }
+        public int UserId { get; set; } 
         public User User { get; set; }
-        [ForeignKey("User")]
-        public ICollection<User> Participants { get; set; }
+        [ForeignKey("Project")]
+        public Project Project { get; set; }
         public Boolean Completed { get; set; }
-      
+
     }
 }
+  

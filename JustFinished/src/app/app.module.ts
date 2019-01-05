@@ -21,7 +21,8 @@ import {FormsModule} from '@angular/forms';
 import { AddedComponent } from './create-work/added/added.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { ProjectComponent } from './project/project.component';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     CurrentWorkComponent,
     CompletedComponent,
     WorkInviteComponent,
-    AddedComponent
+    AddedComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatGridListModule,
     FormsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

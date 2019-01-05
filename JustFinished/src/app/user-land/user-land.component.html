@@ -1,26 +1,29 @@
 <div class="main">
   <button class="work">Create a Work</button>
-  <h1>DASHBOARD</h1>
-  <mat-grid-list cols="3" rowHeight="5:1">
-    <mat-grid-tile><mat-card>
-      <mat-card-title>Completed Works</mat-card-title>
-    </mat-card></mat-grid-tile>
-    <mat-grid-tile><mat-card>
-      <mat-card-title>Incomplete Works</mat-card-title>
-    </mat-card></mat-grid-tile>
-    <mat-grid-tile><mat-card>
-      <mat-card-title>Pending Work Invitation</mat-card-title>
-    </mat-card></mat-grid-tile>
-  </mat-grid-list>
+  <h1 align="center">DASHBOARD</h1>
+  <br>
+<div class="completed">
 <app-completed></app-completed>
-  <app-current-work></app-current-work>
-  <app-work-invite></app-work-invite>
 </div>
+  <div class="invite">
+    <app-work-invite></app-work-invite>
+
+  </div>
+  <div class="pie">
+    <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            responsive = true
+            maintainAspectRatio = false></canvas>
+  </div>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <div class="current">
+    <app-current-work></app-current-work>
+
+  </div>
+
+</div>
+
 
 
