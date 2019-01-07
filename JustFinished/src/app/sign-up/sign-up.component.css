@@ -1,15 +1,15 @@
 body{
   width: 100%;
   min-height: 100vh;
-  margin: 0;
   padding: 0;
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   color: white;
   font-family: sans-serif;
 }
 .login-box{
+  margin-top: 40px;
   border-radius: 50px;
-  width: 320px;
+  width: 420px;
   height: 620px;
   background: rgba(0, 0, 0, 0.2);
   color: #fff;

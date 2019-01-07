@@ -13,9 +13,8 @@ namespace JustFinishedAPI.Database
         public int Id { get; set; }
         [ForeignKey("User")]
         public int UserId { get; set; } 
-        public User User { get; set; }
-        [ForeignKey("Project")]
-        public Project Project { get; set; }
+]        [ForeignKey("Project")]
+        public int ProjectId { get; set; }
         public Boolean Completed { get; set; }
 
     }

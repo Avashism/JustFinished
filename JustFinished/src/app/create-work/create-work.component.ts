@@ -10,13 +10,16 @@ export class CreateWorkComponent implements OnInit {
   constructor() { }
   participants: string;
   adds = [];
-  count = 0;
+  index = 0;
   added() {
-    this.adds[this.count] = this.participants;
-    console.log(this.adds[this.count]);
-    console.log(this.adds)
-    this.count = this.count + 1;
-    console.log(this.count);
+    this.adds[this.index] = this.participants;
+    this.index = this.index + 1;
+    console.log(this.adds);
+  }
+  deleteMember(item) {
+    this.adds.splice(this.adds.indexOf(item) , 1);
+    this.index = this.index - 1 ;
+
   }
   ngOnInit() {
   }

@@ -1,29 +1,33 @@
 .workform{
-  float: left;
-  font-size: 25px;
-  width: fit-content;
-  color: black;
-  margin-top: 5%;
-  left: 8%;
-  box-sizing: border-box;
-  padding: 70px 30px;
+  text-align: center;
+  width: 100%;
+  background: whitesmoke;
+  height: 100vh;
 }
 .participants {
-  width: 325px;
-  margin-top: 15%;
-  float: left;
-  alignment: left;
-  font-size: 25px;
+  width: 500px;
+  height: 200px;
+  border-color: white;
+  font-size: 18px;
+  background: white;
+  alignment: center;
+  text-align: center;
+  align-items: center;
+
+}
+.list{
+  display: inline-block;
+  margin-left: 20px;
+  alignment: center;
 }
 
 textarea{
   width: 500px;
   height: 200px;
-  border-radius: 20px;
-  border-color: #80d0c7;
+  border-color: white;
 }
 input{
-  border-top: 0px;
+border: none
 }
 input:focus,
 select:focus,
@@ -35,4 +39,7 @@ button:focus {
   border-radius: 20px;
   width: 600px;
   alignment: center;
+}
+i{
+  color: red;
 }

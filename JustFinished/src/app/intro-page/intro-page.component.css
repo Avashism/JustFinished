@@ -1,7 +1,8 @@
 .intro{
  min-width: 100%;
   height: auto;
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);  color: white
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  color: white
 }
 .info{
   padding-top: 15%;

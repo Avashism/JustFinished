@@ -1,33 +1,38 @@
 .completed{
+  border-radius: 40px;
   height: 400px;
   float: left;
   width: 15%;
   margin-left: 40px;
   color: black;
-  background: white;
+  background: whitesmoke;
 }
 .invite{
+  border-radius: 40px;
+
   height: 400px;
   margin-left: 100px;
   float: left;
   width: 15%;
   color: black;
-  background: white;
+  background: whitesmoke;
 }
 .current{
+  border-radius: 40px;
+
   margin-top: 400px;
   height: 250px;
   margin-left: 100px;
   width: 80%;
   color: black;
-  background: white;
+  background: whitesmoke;
 }
 
 
 
 .main{
   height: 100vh;
-  background: whitesmoke;
+background: white;
   width: 100%;
   alignment: center;
  }
@@ -38,9 +43,10 @@
   color: #13547a;
   border-radius: 20px;
   font-size: 20px;
-  background: white;
+  background: whitesmoke;
 }
 .pie{
+  color: white;
   float: left;
 width : 600px;
   height: 400px;
