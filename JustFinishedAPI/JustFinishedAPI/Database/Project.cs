@@ -14,10 +14,7 @@ namespace JustFinishedAPI.Database
         public string Title { get; set; }
         public string Description{ get; set; }
         [ForeignKey("User")]
-        public int UserId { get; set; }
-        public User User { get; set; }
-        [ForeignKey("User")]
-        public ICollection<User> Participants { get; set; }
+        public int CreaterId { get; set; }
         public Boolean Completed { get; set; }
       
     }

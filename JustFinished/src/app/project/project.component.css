@@ -1,0 +1,12 @@
+.element{
+  height: 150px;
+  width: 150px;
+  border: 5px;
+  background: whitesmoke;
+}
+.connector{
+  width: 100px;
+  color: red;
+  height: 5px;
+  border-width: 10px;
+}

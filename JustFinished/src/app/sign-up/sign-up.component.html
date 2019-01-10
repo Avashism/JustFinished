@@ -2,9 +2,11 @@
 <div class="login-box">
   <img src="./assets/images/avatar.png" class="avatar">
   <h1>Login Here</h1>
-  <form>
+  <form [(ngModel)]="FormData" >
     <p>Firstname</p>
-    <input type="text" name="firstname" placeholder="Enter Firstname">
+    <input type="text" [(ngModel)]="FirstName" #FN = "ngModel" name="firstname" placeholder="Enter Firstname" required minlength="5">
+    <span *ngIf=" FN.touched">Required</span>
+    <span *ngIf=" FN.error">Invalid</span>
     <p>Lastname</p>
     <input type="text" name="lastname" placeholder="Enter Lastname">
     <p>Username</p>

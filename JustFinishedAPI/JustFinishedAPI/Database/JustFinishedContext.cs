@@ -16,13 +16,14 @@ namespace JustFinishedAPI.Database
 
         public DbSet<User> Users { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<User_Project> Users_Projects { get; set; }
 
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //check here if DB doesn't work
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Blogging;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=JustFinished;Trusted_Connection=True;");
         }
     }
 }

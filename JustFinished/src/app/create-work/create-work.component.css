@@ -29,12 +29,7 @@ textarea{
 input{
 border: none
 }
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none;
-}
+
 .submit{
   border-radius: 20px;
   width: 600px;
