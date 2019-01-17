@@ -27,7 +27,7 @@ namespace JustFinishedAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<JustFinishedContext>(options => options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Blogging;Trusted_Connection=True;"));
+            services.AddDbContext<JustFinishedContext>(options => options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=JustFinished;Trusted_Connection=True;"));
             services.AddMvc();
             services.AddCors(options =>
             {
@@ -53,7 +53,7 @@ namespace JustFinishedAPI
             {
                 app.UseHsts();
             }
-
+            app.UseCors("AllowAllHeaders");
             app.UseHttpsRedirection();
             app.UseMvc();
         }

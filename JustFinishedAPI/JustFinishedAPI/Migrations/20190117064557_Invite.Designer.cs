@@ -4,14 +4,16 @@ using JustFinishedAPI.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JustFinishedAPI.Migrations
 {
     [DbContext(typeof(JustFinishedContext))]
-    partial class JustFinishedContextModelSnapshot : ModelSnapshot
+    [Migration("20190117064557_Invite")]
+    partial class Invite
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

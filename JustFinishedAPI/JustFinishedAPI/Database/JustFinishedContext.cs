@@ -17,6 +17,7 @@ namespace JustFinishedAPI.Database
         public DbSet<User> Users { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<User_Project> Users_Projects { get; set; }
+        public DbSet<User_Invite> Users_Invites { get; set; }
 
 
 

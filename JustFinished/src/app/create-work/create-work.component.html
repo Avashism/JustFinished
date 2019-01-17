@@ -1,9 +1,9 @@
 <div class="workform">
   <h1>CREATE YOUR PROJECT</h1>
 <p>Project Title</p>
-  <input placeholder="Project title...">
+  <input placeholder="Project title..." [(ngModel)]="Title">
   <p>Short Description</p>
-  <textarea placeholder="Description..."></textarea>
+  <textarea placeholder="Description..." [(ngModel)]="Description"></textarea>
   <p>Add Participants</p>
   <input placeholder="Participant's email..." name="participants"  type="email" [(ngModel)]="participants"><button (click)="added()" [disabled]="(count>10)">Add</button>
     <br>
@@ -16,6 +16,7 @@
   </div>
   <br>
   <br>
-  <button class="submit"> Create Your Project</button>
+  <button class="submit" (click)="Submit()"> Create Your Project</button>
+  <h3 align="center">{{message}}</h3>
 
 </div>
