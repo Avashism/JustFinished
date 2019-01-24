@@ -26,6 +26,8 @@ import {FormControlName} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
 import {UserService} from './Services/user.service';
+import { AcceptInvComponent } from './work-invite/accept-inv/accept-inv.component';
+import {MatDialogModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,11 @@ import {UserService} from './Services/user.service';
     CompletedComponent,
     WorkInviteComponent,
     AddedComponent,
-    ProjectComponent
+    ProjectComponent,
+    AcceptInvComponent
+  ],
+  entryComponents: [
+AcceptInvComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +60,8 @@ import {UserService} from './Services/user.service';
     MatInputModule,
     MatFormFieldModule,
     ChartsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [
     FormControlName, HttpClient , UserService

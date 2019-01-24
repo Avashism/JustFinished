@@ -1,13 +1,4 @@
 <h3 align="center">Pending invites:</h3>
 <ul>
-<li>Approval Checking boiss</li>
-<li>Approval Checking boiss</li>
-<li>Approval Checking boiss</li>
-<li>Approval Checking boiss</li>
-<li>Approval Checking boiss</li>
-<li>Approval Checking boiss</li>
-<li>Approval Checking boiss</li>
-<li>Approval Checking boiss</li>
-<li>Approval Checking boiss</li>
-<li>Approval Checking boiss</li>
+<li *ngFor="let invitation of invitations" (click)="title = invitation.title; description = invitation.description ; openDialog()">{{invitation.title}}</li>
 </ul>

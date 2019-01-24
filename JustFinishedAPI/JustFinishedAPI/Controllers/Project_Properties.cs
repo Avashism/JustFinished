@@ -1,29 +1,46 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using JustFinishedAPI.Database;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace JustFinishedAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("Properties")]
     public class Project_Properties : Controller
     {
-        // GET: api/<controller>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly JustFinishedContext _context;
+        public Project_Properties(JustFinishedContext context)
         {
-            return new string[] { "value1", "value2" };
+            _context = context;
+        }
+        [HttpPost("acceptInvitation")]
+        public IActionResult aInvitations([FromBody] User_Project user_project) {
+            _context.Users_Projects.Add(user_project);
+            var userInDb = _context.Users_Invites.SingleOrDefault(u => u.Email == user_project.Email && u.ProjectId == user_project.ProjectId);
+            _context.Users_Invites.Remove(userInDb);
+            _context.SaveChanges();
+            return Ok(true);
         }
 
-        // GET api/<controller>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+
+        [HttpGet("invitations/{email}")]
+        public IActionResult invitations(string email) 
         {
-            return "value";
+            ArrayList invites = new ArrayList();
+           var inv = getProjectId(email);
+            foreach (var i in inv) {
+                var projectInDb = _context.Projects.SingleOrDefault(u => u.Id == i.ProjectId);
+                invites.Add(projectInDb);
+            }
+            return Ok(invites);
         }
+        public IEnumerable<User_Invite> getProjectId(string email) => _context.Users_Invites.Where(i => i.Email == email);
+
 
         // POST api/<controller>
         [HttpPost]

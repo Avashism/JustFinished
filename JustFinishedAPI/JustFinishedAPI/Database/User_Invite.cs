@@ -15,6 +15,7 @@ namespace JustFinishedAPI.Database
         public string Email { get; set; }
         [ForeignKey("Project")]
         public int ProjectId { get; set; }
+        public string Title { get; set; }
 
     }
 }
